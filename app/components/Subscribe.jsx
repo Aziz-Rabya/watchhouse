@@ -46,7 +46,7 @@ const Subscribe = () => {
       </div>
 
       {/* RIGHT SECTION: PRODUCTS */}
-      <div className="flex-1 overflow-x-auto">
+      <div className="flex overflow-x-auto">
         <div className="flex gap-6 pb-4">
           {products.map((item, index) => (
             <div
@@ -59,7 +59,7 @@ const Subscribe = () => {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-40 object-contain mb-4"
+                  className="top-0 w-full h-full object-contain mb-4"
                 />
                 <h3 className="text-lg font-bold mb-2">{item.title}</h3>
                 <p className="text-sm text-gray-800 mb-2">{item.description}</p>
@@ -130,8 +130,7 @@ const podData = [
   },
   {
     title: "Ventures Pods.",
-    description:
-      "Bright, fruit-forward coffee for the curious drinker. ​",
+    description: "Bright, fruit-forward coffee for the curious drinker. ​",
     price: "21.00",
     image: "/images/pink.png",
   },
