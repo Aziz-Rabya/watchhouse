@@ -4,7 +4,7 @@ import ScrollReveal from "./ScrollReveal";
 const Story = () => {
   return (
     <section
-      className="relative w-full h-full bg-cover bg-center bg-no-repeat flex items-center justify-center text-center px-4"
+      className="relative w-full h-full bg-cover bg-center bg-no-repeat flex items-center justify-center text-center px-4 mt-20"
       style={{ backgroundImage: 'url("/images/about-quote-image.png")' }}
     >
       <div className="bg-transparent font-serif text-white p-8 rounded-lg max-w-[1000px] mt-20 mb-20">

@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useLayoutEffect, useState } from "react";
 import { motion, useAnimationFrame, useMotionValue, useTransform } from "framer-motion";
-import "../ScrollVelocity.css";
+import "../globals.css";
 
 function useElementWidth(ref) {
   const [width, setWidth] = useState(0);
