@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/* Global box-sizing for consistent sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal scrolling on the entire page */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* no horizontal scrollbar */
+  background-color: #f6f1e9;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--foreground, black);
+}
+
+/* Container that clips overflow */
+.parallax {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* hide overflow to prevent horizontal scroll */
+  background-color: #f6f1e9;
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* The moving scroller inside the container */
+.scroller {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  gap: 0;
+  will-change: transform; /* optimize animations */
+}
+
+/* Row to group cards */
+.scroller-row {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+}
+
+/* Each card in the scroller */
+.scroller-card {
+  flex-shrink: 0;
+  background: #f6f1e9;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 300px;
+  max-width: 90vw;
+  box-sizing: border-box;
+}
+
+.scroller-icon {
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.scroller-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  line-height: 1.4;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+@media (min-width: 768px) {
+  .scroller-icon {
+    height: 150px;
+    width: 150px;
+  }
+
+  .scroller-card {
+    width: 420px;
+    padding: 2rem;
+    max-width: none;
+  }
+}
